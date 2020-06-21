@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 // import ReactDOM from 'react-dom';
-import './style.css';
+// import './style.css';
 import Person from './Person/Person';
 
 
@@ -42,7 +42,7 @@ class App extends Component<AppProps, AppState> {
   } 
 }
 
-render(<App2 />, document.getElementById('root1'));
+render(<App2 />, document.getElementById('root'));
 registerServiceWorker();
 
 
