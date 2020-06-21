@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+// import ReactDOM from 'react-dom';
 import './style.css';
 import Person from './Person/Person';
+
+
+import './src/index.css';
+import App2 from './src/App';
+import registerServiceWorker from './src/registerServiceWorker';
+
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 
 interface AppProps { }
@@ -34,7 +42,8 @@ class App extends Component<AppProps, AppState> {
   } 
 }
 
-render(<App />, document.getElementById('root'));
+render(<App2 />, document.getElementById('root1'));
+registerServiceWorker();
 
 
 // SUPPORTED EVENTS
