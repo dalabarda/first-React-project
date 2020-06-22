@@ -1,13 +1,13 @@
 import React from 'react';
 
-import classes from './Burger.css';
+import css from './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = ( props ) => {
     // array
     let transformedIngredients = Object.keys( props.ingredients ) // getting an array of strings from ingredients object keys
         .map( igKey => {
-            return [...Array( props.ingredients[igKey] )]
+            return Array(props.ingredients[igKey]).fill(igKey)
               .map( ( _, i ) => { // index is important here
                 return <BurgerIngredient key={igKey + i} type={igKey} />;
             } );
