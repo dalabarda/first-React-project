@@ -13,7 +13,8 @@ class BurgerBuilder extends Component {
             salad: 1,
             bacon: 0,
             cheese: 1,
-            meat: 1
+            meat: 1,
+            salsichao: 2
         }
     }
 

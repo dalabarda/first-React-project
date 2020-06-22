@@ -89,6 +89,14 @@
     border-radius: 15px;
 }
 
+.Salsichao {
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(#ff6600, #cf4f00);
+    margin: 2% auto;
+    border-radius: 15px;
+}
+
 .Cheese {
     width: 90%;
     height: 4.5%;
