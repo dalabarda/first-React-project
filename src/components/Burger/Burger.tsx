@@ -4,8 +4,9 @@ import './Burger.css';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
 
 const burger = ( props ) => {
-    // array
-    let transformedIngredients = Object.keys( props.ingredients ) // getting an array of strings from ingredients object keys
+    // props.ingredients -> {salad: 0, bacon: 0, cheese: 0, meat: 0…}
+    // getting an array of strings from ingredients object keys
+    let transformedIngredients = Object.keys( props.ingredients ) // ["salad", "bacon", "meat", ...]
         .map( igKey => {
             return Array(props.ingredients[igKey]).fill(igKey)
               .map( ( _, i ) => { // index is important here
@@ -16,9 +17,7 @@ const burger = ( props ) => {
             return arr.concat(el) // flattening the array in case the previous is empty ----> []
         }, []);
 
-        console.log(props.ingredients)
-        console.log(Object.keys( props.ingredients ))
-        console.log(transformedIngredients)
+        // transformedIngredients []
         
     if (transformedIngredients.length === 0) {
         console.log(transformedIngredients)

@@ -12,6 +12,18 @@ const INGREDIENT_PRICES = {
   salsichao: 2.5,
 };
 
+interface IIngredientsAmount {
+  ingredients: {
+    salad: number;
+    bacon: number;
+    cheese: number;
+    meat: number;
+    salsichao: number;
+  }
+  
+}
+
+
 class BurgerBuilder extends Component {
     // constructor(props) {
     //     super(props);
