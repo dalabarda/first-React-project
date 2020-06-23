@@ -12,6 +12,18 @@ const INGREDIENT_PRICES = {
   salsichao: 2.5,
 };
 
+// example of type
+interface IPerson {
+    name: string;
+    gender: string;
+}
+interface ICitizen {
+    readonly SSN: number;
+}
+interface IEmployee extends IPerson, ICitizen {
+    empCode: number;
+}
+
 interface IIngredientsAmount {
   ingredients: {
     salad: number;
@@ -20,7 +32,8 @@ interface IIngredientsAmount {
     meat: number;
     salsichao: number;
   }
-  
+  totalPrice: number;
+  purchaseable: boolean;
 }
 
 
@@ -29,7 +42,7 @@ class BurgerBuilder extends Component {
     //     super(props);
     //     this.state = {...}
     // }
-    state = {
+    state:IIngredientsAmount = {
         ingredients: {
             salad: 0,
             bacon: 0,
@@ -37,7 +50,8 @@ class BurgerBuilder extends Component {
             meat: 0,
             salsichao: 0,
         },
-      totalPrice: 4
+      totalPrice: 4,
+      purchaseable: false,
     }
 
   addIngredientHandler = (type) => {
@@ -85,7 +99,8 @@ class BurgerBuilder extends Component {
                 <BuildControls 
                   ingredientAdded={this.addIngredientHandler}
                   ingredientRemoved={this.removeIngredientHandler}
-                  disabled={disabledInfo}/>
+                  disabled={disabledInfo}
+                  price={this.state.totalPrice}/>
             </Aux>
         );
     }
