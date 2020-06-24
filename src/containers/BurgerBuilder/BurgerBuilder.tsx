@@ -37,6 +37,7 @@ interface IIngredientsAmount {
   }
   totalPrice: number;
   purchaseable: boolean;
+  purchasing: boolean;
 }
 
 
@@ -55,6 +56,7 @@ class BurgerBuilder extends Component {
       },
     totalPrice: 4,
     purchaseable: false,
+    purchasing: false,
   }
 
   updatePurchaseState (ingredients) {
@@ -93,16 +95,22 @@ class BurgerBuilder extends Component {
       return;
     }
     const updatedCount = oldCount - 1;
+    
     // because state should be updated in a immutable way...
     const updatedIngredients = {
       ...this.state.ingredients
     };
+
     updatedIngredients[type] = updatedCount;
     const priceDeduction = INGREDIENT_PRICES[type];
     const oldPrice = this.state.totalPrice;
     const newPrice = oldPrice - priceDeduction;
     this.setState({totalPrice: newPrice, ingredients: updatedIngredients})
     this.updatePurchaseState(updatedIngredients);
+  }
+
+  purchaseHandler() {
+    this.setState({purchasing: true});
   }
 
     render () {
