@@ -109,7 +109,9 @@ class BurgerBuilder extends Component {
     this.updatePurchaseState(updatedIngredients);
   }
 
-  purchaseHandler() {
+  // if a method is triggered throw an event. a methodd with 'this' keyword will no work. 'this' will not refer to the class
+  // a workaround is changing it through an arrow function. like the example bellow. NOT purchaseHandler() {...}
+  purchaseHandler = () => { // -> this 
     this.setState({purchasing: true});
   }
 
@@ -122,7 +124,7 @@ class BurgerBuilder extends Component {
       }
         return (
             <Aux>
-                <Modal>
+                <Modal show={this.state.purchasing}>
                   <OrderSummary ingredients={this.state.ingredients}/>
                 </Modal>
                 <Burger ingredients={ this.state.ingredients } />
@@ -131,7 +133,9 @@ class BurgerBuilder extends Component {
                   ingredientRemoved={this.removeIngredientHandler}
                   disabled={disabledInfo}
                   purchaseable={this.state.purchaseable}
-                  price={this.state.totalPrice}/>
+                  price={this.state.totalPrice}
+                  ordered={this.purchaseHandler}
+                  />
             </Aux>
         );
     }
