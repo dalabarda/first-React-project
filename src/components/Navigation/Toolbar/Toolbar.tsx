@@ -1,12 +1,12 @@
 import React from 'react';
 
-// import Aux from '../../hoc/Aux';
+import Logo from '../../Logo/Logo';
 import './Toolbar.css';
 
 const toolbar = ( props ) => (
   <header className="Toolbar">
     <div>MENU </div>
-    <div>LOGO</div>
+    <Logo />
     <nav>
       ...
     </nav>
