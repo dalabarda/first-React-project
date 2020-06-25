@@ -1,0 +1,30 @@
+.SideDrawer {
+  position: fixed; /* even if we scroll it should stay there */
+  width: 280px;
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: white;
+  padding: 32px 16px;
+  box-sizing: transform 0.3s ease-out;
+}
+
+@media (min-width: 500px) {
+  .SideDrawer {
+    display: none;
+  }
+}
+
+.Open {
+  transform: translateX(0); /* this will shift the transition to the values defined */
+}
+
+.Close {
+  transform: translateX(-100%) /* shift to the left */
+}
+
+.Logo {
+  height: 11%;
+}
