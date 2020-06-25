@@ -6,7 +6,7 @@ import './Logo.css';
 
 const logo = ( props ) => (
     <div className="Logo">
-      <img src='../../assets/images/burger-logo.png' alt="MyBurger" />
+      <img src={burgerLogo} alt="MyBurger" />
     </div>
 );
 
