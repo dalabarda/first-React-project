@@ -17,8 +17,8 @@ const burger = ( props ) => {
             return arr.concat(el) // flattening the array in case the previous is empty ----> []
         }, []);
 
-        console.log(transformedIngredients)
-        console.log(props.ingredients)
+        // console.log(transformedIngredients)
+        // console.log(props.ingredients)
         
     if (transformedIngredients.length === 0) {
         console.log(transformedIngredients)

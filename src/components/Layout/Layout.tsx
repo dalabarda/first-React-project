@@ -8,7 +8,6 @@ import './Layout.css';
 const layout = ( props ) => (
     <Aux>
         <Toolbar />
-        <div>Toolbar, SideDrawer, Backdrop</div>
         <main className="Content">
             {props.children}
         </main>
