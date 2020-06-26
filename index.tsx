@@ -5,7 +5,7 @@ import { render } from 'react-dom';
 
 
 import './src/index.css';
-import App2 from './src/App';
+import App from './src/App';
 import registerServiceWorker from './src/registerServiceWorker';
 
 // ReactDOM.render(<App />, document.getElementById('root'));
@@ -17,7 +17,7 @@ interface AppState {
   age: number;
 }
 
-render(<App2 />, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
 registerServiceWorker();
 
 

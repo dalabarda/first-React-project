@@ -8,17 +8,27 @@ import './Layout.css';
 
 class Layout extends Component {
   state = {
-    showSideDrawer: true
+    showSideDrawer: false
   }
   
   sideDrawerClosedHandler = () => {
-    this.setState( {showSideDrawer: false} );
+    this.setState( {showSideDrawer: !this.state.showSideDrawer} );
+  }
+  
+  sideDrawerToggleHandler = () => {
+    // due to the async nature of state, the following code would lead to unexpected outcome
+    // this.setState({showSideDrawer: !this.state.showSideDrawer})
+    
+    // better approach
+    this.setState( (prevState) => {
+      return {showSideDrawer: !prevState.showSideDrawer}; // secure way to toggle
+    });
   }
 
   render () {
     return (
     <Aux>
-        <Toolbar />
+        <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler}/>
         <SideDrawer 
           open={this.state.showSideDrawer} 
           closed={this.sideDrawerClosedHandler} />
