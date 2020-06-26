@@ -5,9 +5,12 @@ import Toolbar from '../Navigation/Toolbar/Toolbar';
 import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
 import './Layout.css';
 
+interface   state {
+    showSideDrawer: boolean;
+  }
 
 class Layout extends Component {
-  state = {
+  state:state = {
     showSideDrawer: false
   }
   
@@ -20,7 +23,7 @@ class Layout extends Component {
     // this.setState({showSideDrawer: !this.state.showSideDrawer})
     
     // better approach
-    this.setState( (prevState) => {
+    this.setState( (prevState: boolean) => {
       return {showSideDrawer: !prevState.showSideDrawer}; // secure way to toggle
     });
   }
