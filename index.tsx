@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 // import ReactDOM from 'react-dom';
 // import './style.css';
-import Person from './Person/Person';
 
 
 import './src/index.css';
