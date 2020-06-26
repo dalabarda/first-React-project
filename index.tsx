@@ -17,30 +17,6 @@ interface AppState {
   age: number;
 }
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React',
-      age: 29
-    };
-  }
-
-  render() {
-    return (
-      <div>
-        <Person 
-          name={this.state.name} 
-          age={this.state.age}
-        />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
-      </div>
-    );
-  } 
-}
-
 render(<App2 />, document.getElementById('root'));
 registerServiceWorker();
 
