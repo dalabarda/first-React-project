@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import Aux from '../../hoc/Aux';
+// import Aux from '../../hoc/Aux/Aux';
 // import burgerLogo from '../../assets/images/burger-logo.png';
 
 // import '../../assets/images/burger-logo.png';

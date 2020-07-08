@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter, RouteProps } from 'react-router';
 
-import Aux from '../../../hoc/Aux';
+import Aux from '../../../hoc/Aux/Aux';
 import Button from '../../UI/Button/Button';
 
 // this interface is so stupid, but it can solve this problem.
